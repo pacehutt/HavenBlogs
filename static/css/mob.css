@@ -1,0 +1,300 @@
+@media screen and (max-width:1200px) {
+    
+    
+ .navigation
+ {
+     height: 75px;
+     max-width: 100%;
+     flex-direction: column;
+     gap: 20px;
+     margin-bottom: 50px;
+ }   
+ .nav-left
+ {
+     text-align: center;
+     flex-direction: column;
+ }
+ .nav-left a
+ {
+     opacity: 0.89;
+ }
+ .nav-left h4
+ {
+    font-size: 1.35rem;
+ }
+ .nav_items
+ {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    font-weight: bold;
+    transform: translate(200%,60%);
+ 
+    transition: all 3s ease-in-out;
+    animation: in 0.5s 1 forwards;
+    display: none;
+ }
+ .nav-right
+ {
+     display: none;
+ }
+ .content-left
+ {
+     width: 100%;
+     padding-left: 0;
+     padding: 10px;
+ }
+.content-right img {
+ display: none;
+
+}
+.content-left h2
+{
+    font-size:1.2em;
+    letter-spacing: 0.15rem;
+}
+.content-left p
+{
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: -webkit-center;
+}
+.nav-show
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    height: 50vh;
+    width: 50%;
+    position: absolute;
+    background: white;
+  
+    box-shadow: -1px 4px 5px #c1c1c1;
+    padding-top: 1.5rem;
+    /* transform: translateX(-200%); */
+    transition: all 1.5s ease-in-out;
+  
+    animation: in 0.5s 1 forwards;
+  
+}
+.nav-show li:focus
+{
+    background-color: #7a99dc;
+
+}
+.nav-hide
+{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    font-weight: bold;
+    transform: translate(200%,70%);
+   
+    transition: all 3s ease-in-out;
+    animation: in 0.5s 1 forwards;
+  
+    
+}
+@keyframes in {
+
+    from
+    {
+        transform: translate(200%,60%);
+    }
+    
+    to
+    {
+        transform: translate(86%,60%);
+    }
+    
+}
+@keyframes out {
+
+    from
+    {
+        transform: translate(86%,60%);
+    }
+    
+    to
+    {
+        transform: translate(200%,60%);
+    }
+    
+}
+.nav-show ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#main-head{
+    opacity: 0;
+    transition: all 0.2s;
+}
+.button-move
+{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: url("F:/Programs Projects/Blogs/static/imgs/menu.png") no-repeat center center/cover;
+    
+    /* background: #000; */
+
+}
+
+
+.home-article img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 5px;
+    /* order: -1; */
+}
+.article-content {
+   /* order: 2; */
+   width: 90%;
+   margin: 2rem auto;
+  margin-left: 1rem;
+  padding-left: 15px;
+ 
+  border-left: 2px solid rgb(104, 104, 221);
+
+}
+.home-articles-heading {
+   
+    text-align: center;
+     opacity: 0;
+     transform: translateY(100%);
+     transition: all 0.2s;
+    font-size: 1.2rem;
+
+}
+.home-article {
+       width: 90vw;
+       flex-direction: row;
+       opacity: 1;
+       transition: all 0.1;
+}
+.home-articles
+{
+    background: none;
+}
+.article-content h3
+{
+    font-size: 1.1rem;
+    color: #000000cf;
+    position: relative;
+    top: 10px;
+
+}
+.date
+{
+    display: none;
+}
+.read
+{
+    position: relative;
+    bottom:25px
+}
+
+.footer
+{
+max-width: 100%;
+font-size: 0.9rem;
+}
+
+
+.content
+{
+    max-width: 100vw;
+    padding: 0;
+    margin-bottom: 4.8rem;
+}
+
+.write-button
+{
+    height: 0.8rem;
+    
+  
+    position: relative;
+    top: 2rem;
+}
+ 
+.nav-toggle
+{
+    display: block;
+    border: 0px;
+    /* background: none; */
+    outline: none;
+    cursor: pointer;
+    opacity: 0.89;
+}
+.nav-left
+{
+     flex-direction: row;
+     justify-content: space-between;
+     width: 95vw;
+}
+.ham
+{
+    display: block;
+    position: relative;
+
+}
+.ham,.ham::before,.ham::after
+{
+    width: 2em;
+    height: 3px;
+    background: #000;
+    transition: all 0.2s ease-in-out;
+}
+.ham::before,.ham::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+
+}
+.ham::before
+{
+    bottom: 6px;
+
+}
+.ham::after
+{
+    top: 6px;
+    
+}
+
+.ham-open .ham
+{
+   transform: rotate(45deg);
+}
+.ham-open .ham::before
+{
+    opacity: 0;
+}
+
+.ham-open .ham::after
+{
+    transform: rotate(90deg) translate(-6px);
+}
+.editor-textarea {
+    width: 375px;
+    height: 305px;
+    border: 2px solid #415e9b;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+}
+.b-input {
+    display: inline-block;
+    
+    width: 80vw;
+    position: relative;
+    right: 15px;
+}
+
+}

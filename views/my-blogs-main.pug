@@ -1,0 +1,61 @@
+extends base.pug
+
+block style 
+  style 
+   include ../static/css/blogs-main.css
+
+block content
+  .main-content-blogpost 
+   .blog-heading.m-auto 
+     h2 #{result.blogs[0].blogHeading}
+   .blog-author-info.max-width-1.m-auto 
+     .right-info
+       div 
+         p By #{result.blogs[0].blogAuthor} 
+       div 
+         p 14th April, #{result.blogs[0].blogReadTime} min read
+       div 
+         h4 Topic - #{result.blogs[0].blogTopic}   
+       
+
+   .blog-main-content.max-width-1.m-auto
+     p #{result.blogs[0].blogBody} 
+  .home-articles.max-width-1.m-auto.font1
+      h3.home-articles-heading
+        | People also read..
+      ul
+        li   
+         .home-article
+           .article-content.font1
+             a(href="/blogPost") 
+               h4 Lorem ipsum dolor sit amet consectetur lorem2.
+             br  
+             span.author-name Author Name
+             br
+             span.date 27th April - 6m read
+           .article-img 
+             img(src='../static/imgs/vecteezy_webweb-and-blog-creative-content-management_.jpg', alt='')
+        li   
+         .home-article
+           .article-content.font1
+             a(href="/blogPost") 
+               h4 Lorem ipsum dolor sit amet consectetur lorem2.
+             br  
+             span.author-name Author Name
+             br
+             span.date 27th April - 6m read
+           .article-img 
+             img(src='../static/imgs/vecteezy_webweb-and-blog-creative-content-management_.jpg', alt='') 
+        li   
+         .home-article
+           .article-content.font1
+             a(href="/blogPost") 
+               h4 Lorem ipsum dolor sit amet consectetur lorem2.
+             br  
+             span.author-name Author Name
+             br
+             span.date 27th April - 6m read
+           .article-img 
+             img(src='../static/imgs/vecteezy_webweb-and-blog-creative-content-management_.jpg', alt='') 
+        
+             

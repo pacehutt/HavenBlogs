@@ -1,0 +1,44 @@
+extends base.pug
+
+block scripts
+  script(src="../static/scripts/editor.js")
+  script(src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest")
+  script(src="https://cdn.jsdelivr.net/npm/@editorjs/link")
+  script(src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest")
+  script(src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest")
+  script(src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest")
+  script(src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest")
+block style 
+  style 
+   include ../static/css/blogs-write.css
+  
+  
+  //- 
+
+
+block content 
+  h2 Type your creativity to share...
+  div#details 
+    span * Youtube embeds - directly paste videos links 
+    br
+    span * Images - just paste at your desired positions 
+    br
+    span * Look for '+' sign for more editing options
+  .main-cont.max-width-1.m-auto
+     form#write-form.m-auto(action="/write", method="post")
+       div.max-width-1 
+        input#bHeading.b-input(type="text" name="blogHeading" required)
+        label.label(for="bHeading") Your Heading  
+       div.max-width-1 
+        input#bTopic.b-input(type="text" name="blogTopic" required)
+        label.label(for="bTopic") Your Topic
+       div#editorjs.editor-textarea 
+       div.max-width-1
+        input#readTime.b-input(type="text" name="blogReadTime" required)
+        label.label(for="readTime") Read Time (in mins)
+       div.max-width-1 
+        input#author.b-input(type="text" name="blogAuthor" required)
+        label.label(for="author") Author's Name
+     input#p-button(type="submit" form="write-form" required)
+  script(src="../static/scripts/editor.js")   
+  script(src="../static/scripts/blog-write.js") 

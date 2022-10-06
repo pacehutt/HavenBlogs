@@ -1,0 +1,14 @@
+extends base.pug
+block style 
+  style 
+    include ../static/css/contact.css
+    
+block content
+  .contentt.max-width-1.m-auto
+   .content-inside
+      h3 USER LOGIN
+      form(action="/login" method="post") 
+       input(type="email" name="email" id="email" placeholder="Email")
+       input(type="password", name="password" id="passwd" placeholder="Password")
+       input(type="submit", id="submit" value="Sign in")
+      p#error #{error}

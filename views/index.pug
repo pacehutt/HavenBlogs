@@ -1,0 +1,47 @@
+extends base.pug
+
+block metaTags 
+  meta(name="description", content="HavenBlogs is an open platform where readers find dynamic thinking, and where undiscovered voices can share their writing on any topic.  Anyone can write on HavenBlogs. Thought-leaders, journalists, experts, and individuals with unique perspectives share their thinking here.")
+  meta(name="title", content="HavenBlogs - Where good ideas find you.")
+  meta(name="keywords" content="tech blogs, elon musk latest news,twitter,instagram,best design blogs,best blogs for productivity,technology blogs,best tech articles,best articles,best news,news,blogs")
+  meta(property="og:title" content=`Haven-Blogs, Read and Share your own thoughts..(sneak peek into the world of blogs) `)
+  meta(property="og:type" content=`title.text`)
+  meta(property="og:url" content=`https://www.havenblogs.com`)
+  meta(property='og:image' content='../static/imgs/meta-index')
+
+block scripts 
+//-  script(src='../static/scripts/base.js')
+block style 
+  style
+    include ../static/css/index.css
+    include ../static/css/utils.css
+    include ../static/css/mob.css
+block content
+    .content.max-width-1.m-auto
+      .content-left
+        h2#main-head Bloggers are Feeded Here
+        p HavenBlogs is an open platform where readers find dynamic thinking, and where undiscovered voices can share their writing on any topic.
+        a.write-button(href="/write") WRITE HERE
+          
+    .max-width-1.m-auto
+      hr
+    .home-articles.max-width-1.m-auto.font1
+      h3.home-articles-heading
+        | Featured Blogs-
+      ul
+       each i in allBlogs
+        each element in i.blogs 
+         li   
+          .home-article
+            .article-content.font1
+                a(href=`/blogs/${i.slug}/${i._id}`)
+                  h3.article-heading #{element.blogHeading}
+                br  
+                span.author-name -By #{element.blogAuthor}
+                br
+                span.date - #{i.date} 
+                br
+                span.read - #{element.blogReadTime}
+            .article-img 
+              img(src=`https://source.unsplash.com/random/1920×1702/?${element.blogTopic}`, alt='blog-image' loading="lazy")
+        

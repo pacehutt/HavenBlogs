@@ -1,0 +1,67 @@
+html
+  head
+    //- link(rel="icon", href="../static/imgs/BH(1).png", type="image/png")
+    link(rel="shortcut icon" ,href="../static/imgs/myIcon.ico" type="image/x-icon")
+    title Haven Blogs - #{title}
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="robots", content="index,follow")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='apple-touch-icon' sizes='180x180' href='../static/imgs/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='../static/imgs/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='../static/imgs/favicon-16x16.png')
+    link(href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet")
+    block metaTags
+
+    //- link(rel='manifest' href='site.webmanifest')
+     
+    
+    script(src='../static/scripts/main.js')
+    script(src='https://omoonsih.net/pfe/current/tag.min.js?z=5342991' data-cfasync='false' async='')
+    script(src="https://cdn.jsdelivr.net/npm/editorjs-parser@1/build/Parser.browser.min.js")      
+    script(src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest")
+    script(src="https://cdn.jsdelivr.net/npm/@editorjs/link")
+    script(src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest")
+    script(src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest")
+    script(src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest")
+    script(async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1042075577991024' crossorigin='anonymous')
+   
+    block scripts
+     script(src='../static/scripts/base.js')
+     
+    style 
+      include ../static/css/base.css
+      include ../static/css/utils.css 
+      include ../static/css/index.css 
+      include ../static/css/mob.css
+    block style
+  body
+    nav.navigation.max-width-1.m-auto
+      .nav-left.nav-ham
+        h4.showHead 
+         a(href='/') Haven-Blogs
+        button.nav-toggle 
+          span.ham
+        ul.nav_items
+          li
+            a(href='/' ) Home
+          li
+            a(href='/about') About
+          li
+            a(href='/blogs/myblogs' ) My Blogs    
+          li
+            a(href='/write' id="write" ) #{Write}
+          li
+            a(href='' id="logout") #{Logout}    
+          li
+            a(href='/register' id="signup") #{SignUp}
+          li
+            a(href='/login' id="signin") #{SignIn}  
+      .nav-right
+        input.form-input(type='text', name='', id='search', placeholder='Search')
+        a(href="/search").btn Search
+    .overlap 
+      block content
+      .footer.max-width-2.m-auto
+         | 2022 &copy; havenblogs.com 
+    

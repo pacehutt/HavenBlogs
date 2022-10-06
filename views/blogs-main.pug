@@ -1,0 +1,136 @@
+extends base.pug
+
+block metaTags 
+  meta(name="title", content=`${result.blogs[0].blogHeading}`)
+  meta(name="description", content=`'${des}'`)
+  meta(name="keywords" content=`'${result.blogs[0].blogTopic}'`)
+  meta(property="og:title" content=`'${result.blogs[0].blogHeading}'`)
+  meta(property="og:type" content=`blog.text`)
+  meta(property="og:url" content=`https://www.havenblogs.com/blogs/${result._id}`)
+  meta(property='og:image' content=`https://source.unsplash.com/random/1920×1702/?${result.blogs[0].blogHeading}`)
+block scripts
+  script. 
+    
+     
+     
+    
+     window.addEventListener('load',cb)
+     function cb()
+         {
+
+ 
+          const data=document.getElementById('blog-body')
+
+          console.log(data.innerText);
+          data.innerHTML=data.innerText;
+          let overlay=document.querySelector(".overlayy");
+          overlay.style.display="none"
+          let body=document.querySelector("body");
+          body.style.overflow="visible";
+          }
+          
+block style 
+  style 
+   include ../static/css/blogs-main.css
+   include ../static/css/mob.css
+
+block content
+  .overlayy
+  .main-content-blogpost 
+   .blog-heading.m-auto 
+     h2#mainH #{result.blogs[0].blogHeading}
+   .blog-author-info.max-width-1.m-auto 
+     .right-info
+       div 
+         p#main-author By #{result.blogs[0].blogAuthor} 
+       div 
+         p #{result.date},
+         p #{result.blogs[0].blogReadTime} min read
+       br  
+       div 
+         h3#main-topic Topic - #{result.blogs[0].blogTopic}   
+        
+
+   .blog-main-content.max-width-1.m-auto
+     p#blog-body #{result.blogs[0].blogBody} 
+  .home-articles.max-width-1.m-auto.font1
+        h3
+         | People also read..
+        ul 
+          li   
+            .home-article.articles
+              .article-content.font1
+                  a(href=`/blogs/${element1.slug}/${element1._id}`)
+                    h4.rec-head #{element1.blogs[0].blogHeading}
+                  br  
+                  span.author-name By #{element1.blogs[0].blogAuthor}
+                  br
+                  span.date #{element1.date} - #{element1.blogs[0].blogReadTime}
+              .article-img 
+                img(src=`https://source.unsplash.com/random/1920×1702/?${element1.blogs[0].blogTopic}`, alt='')
+          li   
+            .home-article
+              .article-content.font1
+                  a(href=`/blogs/${element2.slug}/${element2._id}`)
+                    h4.rec-head #{element2.blogs[0].blogHeading}
+                  br  
+                  span.author-name By #{element2.blogs[0].blogAuthor}
+                  br
+                  span.date #{element2.date} - #{element2.blogs[0].blogReadTime}
+              .article-img 
+                img(src=`https://source.unsplash.com/random/1920×1702/?${element2.blogs[0].blogTopic}`, alt='')
+          li   
+            .home-article
+              .article-content.font1
+                  a(href=`/blogs/${element2.slug}/${element3._id}`)
+                    h4.rec-head #{element3.blogs[0].blogHeading}
+                  br  
+                  span.author-name By #{element3.blogs[0].blogAuthor}
+                  br
+                  span.date #{element3.date} - #{element3.blogs[0].blogReadTime}
+              .article-img 
+                img(src=`https://source.unsplash.com/random/1920×1702/?${element3.blogs[0].blogTopic}`, alt='')
+  script. 
+    
+         
+    const ham=document.getElementsByClassName('nav-toggle');
+    const nav_items=document.getElementsByClassName('nav_items')
+    
+    let flag=0;
+    
+    
+        ham[0].addEventListener('click',()=>
+        {
+            console.log("here")
+          if(flag==0)
+          {
+           
+              nav_items[0].classList.add("nav-show");
+              ham[0].classList.add('ham-open');
+              nav_items[0].style.transform="translate(86%,60%);";
+              document.getElementsByClassName("overlap")[0].style.opacity="0.5"
+              document.getElementsByClassName("overlap")[0].style.pointerEvents="none"
+              document.querySelector("body").style.overflow="hidden"
+              
+              
+              flag=1; 
+        }else
+
+        {
+            
+            document.getElementsByClassName("overlap")[0].style.opacity="1"
+            document.getElementsByClassName("overlap")[0].style.pointerEvents="all"
+            nav_items[0].classList.remove('nav-show');
+            document.querySelector("body").style.overflow="visible"
+            ham[0].classList.remove('ham-open');
+     
+           
+            
+            nav_items[0].style.transform="translate(200%,60%);";
+            flag=0;
+            
+        }
+          
+        })
+        
+          

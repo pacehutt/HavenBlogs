@@ -1,0 +1,199 @@
+
+.max-width-1{
+
+    max-width: 86vw;
+}
+.abt-container
+{
+    width: 95%;
+    display: flex;
+    margin-top: 50px;
+    /* gap: 20px; */
+    justify-content: space-evenly;
+        margin-bottom: 6rem;
+    /* flex-direction: column; */
+}
+.first img
+{
+    height: 270px;
+    width: 270px;
+    filter: grayscale(100%);
+    object-fit:cover;
+}
+/* .first::after
+{
+   
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+} */
+.second,.third
+{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+
+}
+.second
+{
+  width: 200px;
+
+}
+.second h2,.third h2
+{
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+.second p
+{
+    line-height: 28px;
+    font-family: var(--font2);
+    font-weight:600;
+    letter-spacing: .02em;
+    font-size: 1.03rem;
+}
+.second img
+{
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    margin-top: 20px;
+
+    
+}
+.third
+{
+    height: 740px;
+}
+.third p
+{
+    font-size: 1rem;
+    width: 250px;
+ 
+    letter-spacing: .02em;
+    line-height: 1.6;
+
+}
+.contact-form 
+{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label
+{
+    font-size: 0.8rem;
+    line-height: 2;
+}
+.abt-input,.contact-form textarea
+{
+    outline:none;
+    color: rgb(8, 8, 8);
+}
+.abt-input
+{
+    padding: 10px;
+
+}
+.contact-form button
+{
+    margin: 10px;
+    color: black;
+    font-family: var(--font2);
+    cursor: pointer;
+    outline: none;
+    border: 1px solid rgb(63, 63, 63);
+    transition: all 0.3s;
+}
+.contact-form button:hover
+{
+    color: white;
+    background: #0095F6;
+
+    font-weight: bold;
+  transition: all 0.15s;
+
+
+    /* background-color: ; */
+}
+.smallFont
+{
+    
+    margin-top: 8px;
+    font-size: 0.9rem;
+    
+}
+.bigFont
+{
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width:1200px) {
+      .contact-form label {
+	          font-size: 0.8rem;
+		      line-height: 2.3;
+	      }
+    .abt-container
+    {
+          flex-direction: column;
+         margin-left: 0;
+         gap: 0;
+
+
+    }
+    .second
+    {
+        width: 100vw;
+    }
+    .first,.second,.third,.fourth
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .second p
+    {
+        font-weight: 400;
+        font-size: 0.9rem;
+        text-align: left;
+        width: 88vw;
+    }
+    .third p
+    {
+
+        font-size: 0.8rem;
+        text-align: left;
+        width: 85vw;
+    }
+    .second h2,.third h2
+    {
+        text-align: left;
+        width: 88vw;
+    }
+    .third
+    {
+        height: 560px;
+
+    }
+
+    .third h2
+{
+    width: 86vw;
+
+}
+    .bigFont
+    {
+        font-size: 0.7rem;
+    }
+    
+    .navigation
+    {
+        max-width: 95vw;
+    }
+
+
+}

@@ -1,0 +1,25 @@
+extends base.pug
+
+
+  
+block style 
+  style 
+    include ../static/css/contact.css
+block scripts 
+  script(src="../static/scripts/register.js")  
+      
+    
+block content
+   .contentt.max-width-1.m-auto
+      h3 REGISTER - USER
+      form(action="/register" method="post" id="r-form") 
+       input(type="text" name="name" id="name" placeholder="Name" class="nameInput")
+       div.smallCaseName *only Alphabets are allowed (5-20 in length);
+       input(type="email" name="email" id="email" placeholder="Email" class="emailInput")
+       div.smallCaseEmail *please enter a valid email;
+       input(type="password", name="passwd" id="passwd" placeholder="Password" class="passwordInput")
+       div.smallCasePassword *must have 6-10 characters containing a-z/0-9/@/$
+       
+       input(type="password", name="cpasswd" id="cpasswd" placeholder="Confirm Password")
+       input(type="submit", id="submit" value="Register")
+      p #{error} 

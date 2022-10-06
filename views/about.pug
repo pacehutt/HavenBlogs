@@ -1,0 +1,54 @@
+extends base.pug
+block metaTags 
+  meta(name="title", content="HavenBlogs - About")
+  meta(name="description", content="The Haven-Blogs Community is here to provide you all a better place for surfing tech, entertainment, blogs and sharing your own thoughts with others")
+  meta(name="keywords", content="best about page, about page designs, about us template, about us websites,about us, best designs for about us,about,designaboutus, feedback template,minimal,about, minimal designs")
+  meta(property="og:title" content=`~~About Page You Can't Hate~~`)
+  meta(property="og:type" content=`about.text`)
+  meta(property="og:url" content=`https://www.havenblogs.com/blogs/about`)
+  meta(property='og:image' content=`https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80`)
+block style 
+ style 
+   include ../static/css/about.css
+
+block content 
+  .abt-container.m-auto
+    .first 
+      img.first-img(src="https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80", alt="image-about")
+    .second
+      h2 The Short 
+      p The Haven-Blogs Community is here to provide you all a better place for surfing tech, entertainment, blogs and sharing your own thoughts with others.. We are eager 😃😀 to serve you with our full potential... 
+      img(src="https://images.unsplash.com/photo-1546074177-ffdda98d214f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80", alt="aboutpic")
+      span.smallFont Wanna read some stuffs.. 
+    .third 
+      h2 The Long 
+      p Here on the internet, a lot of things are normal. We don’t even wink an eye on a cat playing a xylophone, and even worse, it’s normal to post every thought you have on social media.
+      p
+        strong Where’s the cat video? 
+        a(href="https://www.youtube.com/watch?v=BvjterYmC98" target="blank") Right Here
+        |  but that’s irrelevant.
+      br
+      p So we are not wasting your time which you like to do yourself. Isn't it? 🤫
+      p You might be having enough time while reading about us...that's why we advice you to write in this free time of yours😐.. 
+      br
+      p Anyway,send us a message, be it you showing interest or just telling us about our might be so 
+        strike 
+         strong boring 
+        |  website.
+      p Atlast we have some cookies 🍪🍪 for you...Yeah nice guess they are saved in your device📱
+      br
+      p That's it NOICE
+      br
+      p.bigFont(style=" font-size: 1.15rem; font-weight:bold; ") Our 
+        a(href="https://www.instagram.com/mafiz._/" target="blank") instagram 
+        |is Here .🕶. Feel free to follow🎈, (please know us buds😶)  
+    .fourth
+        form.contact-form(action="/contact", method="post") 
+          label(for="cname") Name *
+          input.abt-input(type="text" id="cname" name="cname" required)
+          label(for="cemail") Email *  
+          input#cemail.abt-input(type="email" name="cemail" required)
+          label(for="feedback") Feedback *  
+          textarea#feedback(name="feedback", cols="30", rows="10") 
+          button(type="submit") Done¯\_(ツ)_/¯
+           

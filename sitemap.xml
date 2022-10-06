@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://havenblogs.com/</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/about</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/login</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/register</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/search</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/blogs/trending-vs-code-extensions-for-productivity/62bb2c48f07e556ee5fe17e5</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/blogs/who-are-full-stack-developer/62bb2d40f07e556ee5fe17f4</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/blogs/devops-is-a-failure/62bb2e30f07e556ee5fe17fd</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://havenblogs.com/blogs/web-developer-salary-in-india-for-freshers-and-experienced/62bb2fecf07e556ee5fe1819</loc>
+  <lastmod>2022-06-28T16:46:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

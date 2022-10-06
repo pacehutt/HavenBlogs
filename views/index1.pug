@@ -1,0 +1,45 @@
+extends base.pug
+block scripts 
+//-  script(src='../static/scripts/base.js')
+block metaTags 
+  meta(property="og:title" content=`Haven-Blogs, Read and Share your own thoughts..(sneak peek into the world of blogs) `)
+  meta(property="og:type" content=`title.text`)
+  meta(property="og:url" content=`https://www.havenblogs.com/blogs`)
+  meta(property='og:image' content=`https://images.saymedia-content.com/.image/c_fit%2Ccs_srgb%2Cq_auto:eco%2Cw_1280/MTc2NTEzODc0MTcyODQ3ODgy/pages.webp`)
+
+
+
+block style 
+  style
+    include ../static/css/index.css
+    include ../static/css/utils.css
+    include ../static/css/mob.css
+block content
+    .content.max-width-1.m-auto
+      .content-left
+        h2#main-head Bloggers are Feeded Here
+        p Blogs-Haven is a blogging network where people write about technology, researchs, entertainment and many more topics!
+        a.write-button(href="/write") WRITE HERE
+          
+    .max-width-1.m-auto
+      hr
+    .home-articles.max-width-1.m-auto.font1
+      h3.home-articles-heading
+        | Featured Blogs-
+      ul
+       each i in allBlogs
+        each element in i.blogs 
+         li   
+          .home-article
+            .article-content.font1
+                a(href=`/blogs/${i.slug}/${i._id}`)
+                  h3.article-heading #{element.blogHeading}
+                br  
+                span.author-name -By #{element.blogAuthor}
+                br
+                span.date - #{i.date} 
+                br
+                span.read - #{element.blogReadTime}
+            .article-img 
+              img(src=`https://source.unsplash.com/random/1920×1702/?${element.blogTopic}`, alt='blog-image' loading="lazy")
+        
